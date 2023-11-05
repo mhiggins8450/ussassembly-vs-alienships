@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.combat-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.ussAssembly, .alienShip {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+} 
+
+.ussAssembly img, .alienShip img {
+    width: 150px;
+    height: 150px;
+}
+
+.ussAssembly, .alienShip {
+    display: inline-block;
+    margin: 20px;
+}
+
+.shake-once {
+    animation: shake-once 0.5s ease-in-out;
+}
+
+/* .shake-twice {
+    animation: shake-twice 0.5s ease-in-out;
+}
+
+.shake-thrice {
+    animation: shake-thrice 0.5s ease-in-out;
+}
+
+.shake-violently {
+    animation: shake-violently 0.5s ease-in-out;
+} */
+
+@keyframes shake-once {
+    0%, 100% { transform: translate(0, 0); }
+    20%, 40%, 60%, 80% { transform: translate(-5px, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(5px, 0); }
+}
+
+/* @keyframes shake-twice {
+    0%, 100% { transform: translate(0, 0); }
+    20%, 40%, 60%, 80% { transform: translate(-10px, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(10px, 0); }
+}
+
+@keyframes shake-thrice {
+    0%, 100% { transform: translate(0, 0); }
+    20%, 40%, 60%, 80% { transform: translate(-15px, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(15px, 0); }
+}
+
+@keyframes shake-violently {
+    0%, 100% { transform: translate(0, 0); }
+    20%, 40%, 60%, 80% { transform: translate(-20px, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(20px, 0); }
+} */
