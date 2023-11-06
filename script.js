@@ -146,11 +146,22 @@ window.onload = function () {
         }
     }
 
+    //Function to handle USS Assembly's destruction
+    function gameOver() {
+        messageDiv.innerText = "Game Over! USS Assembly has been destroyed.";
+        attackButton.style.display = "none";
+        retreatButton.style.display = "none";
+    }
+
     // Function to handle USS Assembly's retreat
     function retreat() {
+        if (ussAssembly.hull <= 0) {
+            gameOver();
+        } else {
         messageDiv.innerText = "You coward! The universe is doomed!";
         attackButton.style.display = "none";
         retreatButton.style.display = "none";
+        }
     }
 
     // Function to continue the round
