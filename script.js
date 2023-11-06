@@ -1,4 +1,5 @@
 window.onload = function () {
+    // Initialize USS Assembly and game variables
     const ussAssembly = {
         hull: 20,
         firepower: 5,
@@ -11,9 +12,10 @@ window.onload = function () {
     const attackButton = document.getElementById("attack-button");
     const messageDiv = document.getElementById("message");
     const retreatButton = document.getElementById("retreat-button");
-    let currentAlienIndex = 0;
+    let currentAlienIndex = 0; // Index to keep track of the current alienship
     let turn = 1;
 
+    // Create an array of alienships with random attributes
     const alienShips = [
         {
             hull: Math.floor(Math.random() * 4) + 3,
@@ -59,6 +61,7 @@ window.onload = function () {
         },
     ];
 
+    // Function to report the player's action
     function reportPlayerAction(damage) {
         const report = document.createElement("h3");
         report.textContent = `Turn: ${turn++} - USS Assembly hits ${alienShips[currentAlienIndex].title} for ${damage} damage`;
@@ -68,6 +71,7 @@ window.onload = function () {
         ussHull.textContent = `Hull: ${ussAssembly.hull}`;
     }
 
+    // Function to handle USSAssembly's attack
     function attack() {
         if (Math.random() <= ussAssembly.accuracy) {
             const damageDealt = ussAssembly.firepower;
@@ -85,6 +89,7 @@ window.onload = function () {
         }
     }
 
+    // Function to handle a missed attack by USS Assembly
     function miss() {
         const report = document.createElement("h3");
         report.textContent = `Turn: ${turn} - USS Assembly misses ${alienShips[currentAlienIndex].title}`;
@@ -92,6 +97,7 @@ window.onload = function () {
         battleLog.scrollTop = battleLog.scrollHeight;
     }
 
+    // Function to handle the alienships' counterattacks
     function counter() {
         if (Math.random() <= alienShips[currentAlienIndex].accuracy) {
             const damageTaken = alienShips[currentAlienIndex].firepower;
@@ -115,6 +121,7 @@ window.onload = function () {
         }
     }
 
+    // Function to handle when an alienship is destoryed
     function destroyAlien() {
         const alienShipImage = document.querySelector(".alienShip img");
         alienShipImage.src = "images/explosion.gif";
@@ -139,12 +146,14 @@ window.onload = function () {
         }
     }
 
+    // Function to handle USS Assembly's retreat
     function retreat() {
         messageDiv.innerText = "You coward! The universe is doomed!";
         attackButton.style.display = "none";
         retreatButton.style.display = "none";
     }
 
+    // Function to continue the round
     function continueRound() {
         if (ussAssembly.hull > 0 && alienShips[currentAlienIndex].hull > 0) {
             setTimeout(() => {
@@ -154,10 +163,12 @@ window.onload = function () {
         }
     }
 
+    // EventListener for the Attack button
     attackButton.addEventListener("click", () => {
         attack();
     });
 
+    // EventListener for the Retreat button
     retreatButton.addEventListener("click", () => {
         retreat();
     });
