@@ -1,7 +1,7 @@
 window.onload = function () {
     // Initialize USS Assembly and game variables
     const ussAssembly = {
-        hull: 5,
+        hull: 20,
         firepower: 5,
         accuracy: 0.7,
     };
