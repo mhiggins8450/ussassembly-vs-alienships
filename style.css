@@ -14,6 +14,8 @@ body {
 }
 
 .combat-container {
+    background-image: url("images/space.gif");
+    background-size: cover;
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
@@ -21,8 +23,8 @@ body {
 }
 
 .ussAssembly, .alienShip {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    background-color: #f9f9f900;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
     padding: 10px;
     text-align: center;
@@ -71,4 +73,12 @@ button:hover {
 
 .player p, .enemy p {
     font-weight: bold;
+}
+
+.shipText {
+   color: white 
+}
+
+.hullRating {
+    color: white
 }
