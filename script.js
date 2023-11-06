@@ -18,44 +18,44 @@ window.onload = function () {
     // Create an array of alienships with random attributes
     const alienShips = [
         {
-            hull: Math.floor(Math.random() * 4) + 3,
-            firepower: Math.floor(Math.random() * 3) + 2,
-            accuracy: (Math.random() * 0.2) + 0.6,
+            hull: Math.floor(Math.random() * 4) + 4,
+            firepower: Math.floor(Math.random() * 3) + 3,
+            accuracy: (Math.random() * 0.2) + 0.7,
             image: "./images/alienship1.png",
             title: "Alienship 1",
         },
         {
-            hull: Math.floor(Math.random() * 4) + 3,
-            firepower: Math.floor(Math.random() * 3) + 2,
-            accuracy: (Math.random() * 0.2) + 0.6,
+            hull: Math.floor(Math.random() * 4) + 5,
+            firepower: Math.floor(Math.random() * 3) + 4,
+            accuracy: (Math.random() * 0.2) + 0.8,
             image: "./images/alienship2.png",
             title: "Alienship 2",
         },
         {
-            hull: Math.floor(Math.random() * 4) + 3,
-            firepower: Math.floor(Math.random() * 3) + 2,
-            accuracy: (Math.random() * 0.2) + 0.6,
+            hull: Math.floor(Math.random() * 4) + 6,
+            firepower: Math.floor(Math.random() * 3) + 5,
+            accuracy: (Math.random() * 0.2) + 0.85,
             image: "./images/alienship3.png",
             title: "Alienship 3",
         },
         {
-            hull: Math.floor(Math.random() * 4) + 3,
-            firepower: Math.floor(Math.random() * 3) + 2,
-            accuracy: (Math.random() * 0.2) + 0.6,
+            hull: Math.floor(Math.random() * 4) + 7,
+            firepower: Math.floor(Math.random() * 3) + 6,
+            accuracy: (Math.random() * 0.2) + 0.9,
             image: "./images/alienship4.png",
             title: "Alienship 4",
         },
         {
-            hull: Math.floor(Math.random() * 4) + 3,
-            firepower: Math.floor(Math.random() * 3) + 2,
-            accuracy: (Math.random() * 0.2) + 0.6,
+            hull: Math.floor(Math.random() * 4) + 8,
+            firepower: Math.floor(Math.random() * 3) + 7,
+            accuracy: (Math.random() * 0.2) + 0.95,
             image: "./images/alienship5.png",
             title: "Alienship 5",
         },
         {
-            hull: Math.floor(Math.random() * 4) + 3,
-            firepower: Math.floor(Math.random() * 3) + 2,
-            accuracy: (Math.random() * 0.2) + 0.6,
+            hull: Math.floor(Math.random() * 4) + 9,
+            firepower: Math.floor(Math.random() * 3) + 8,
+            accuracy: (Math.random() * 0.2) + .975,
             image: "./images/alienship6.png",
             title: "Alienship 6",
         },
@@ -121,7 +121,7 @@ window.onload = function () {
         }
     }
 
-    // Function to handle when an alienship is destoryed
+    // Function to handle when an alienship is destroyed
     function destroyAlien() {
         const alienShipImage = document.querySelector(".alienShip img");
         alienShipImage.src = "images/explosion.gif";
