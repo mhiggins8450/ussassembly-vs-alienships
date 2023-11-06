@@ -13,7 +13,7 @@
             <div class="ussAssembly">
                 <h2>USS Assembly</h2>
                 <img src="images/uss assembly.png" alt="USS Assembly">
-                <p>Hull: 20</p>
+                <p id="uss-hull">Hull: 20</p>
             </div>
             <div class="alienShip">
                 <h2>Alienship 1</h2>
@@ -22,8 +22,11 @@
             </div>
         </div>
         <div id="message"></div>
-        <div id="battle-log"></div>
+        <div id="battle-log-container">
+            <div id="battle-log"></div>
+        </div>
         <button id="attack-button">Attack</button>
+        <button id="retreat-button" style="display: none">Retreat</button>
     </div>
     <script src="script.js" async></script>
 </body>

@@ -26,6 +26,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     text-align: center;
+    position: relative;
 }
 
 button {
@@ -52,42 +53,22 @@ button:hover {
     margin: 20px;
 }
 
-.shake-once {
-    animation: shake-once 0.5s ease-in-out;
+#battle-log-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
-/* .shake-twice {
-    animation: shake-twice 0.5s ease-in-out;
+#battle-log {
+    text-align: left;
+    padding: 10px;
 }
 
-.shake-thrice {
-    animation: shake-thrice 0.5s ease-in-out;
+.player p, .enemy p {
+    font-weight: bold;
 }
-
-.shake-violently {
-    animation: shake-violently 0.5s ease-in-out;
-} */
-
-@keyframes shake-once {
-    0%, 100% { transform: translate(0, 0); }
-    20%, 40%, 60%, 80% { transform: translate(-5px, 0); }
-    10%, 30%, 50%, 70%, 90% { transform: translate(5px, 0); }
-}
-
-/* @keyframes shake-twice {
-    0%, 100% { transform: translate(0, 0); }
-    20%, 40%, 60%, 80% { transform: translate(-10px, 0); }
-    10%, 30%, 50%, 70%, 90% { transform: translate(10px, 0); }
-}
-
-@keyframes shake-thrice {
-    0%, 100% { transform: translate(0, 0); }
-    20%, 40%, 60%, 80% { transform: translate(-15px, 0); }
-    10%, 30%, 50%, 70%, 90% { transform: translate(15px, 0); }
-}
-
-@keyframes shake-violently {
-    0%, 100% { transform: translate(0, 0); }
-    20%, 40%, 60%, 80% { transform: translate(-20px, 0); }
-    10%, 30%, 50%, 70%, 90% { transform: translate(20px, 0); }
-} */
