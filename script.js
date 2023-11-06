@@ -1,7 +1,7 @@
 window.onload = function () {
     // Initialize USS Assembly and game variables
     const ussAssembly = {
-        hull: 20,
+        hull: 5,
         firepower: 5,
         accuracy: 0.7,
     };
@@ -148,7 +148,9 @@ window.onload = function () {
 
     //Function to handle USS Assembly's destruction
     function gameOver() {
-        messageDiv.innerText = "Game Over! USS Assembly has been destroyed.";
+        messageDiv.innerText = "USS Assembly has been destroyed! The universe is doomed!";
+        const ussAssembly = document.querySelector(".ussAssembly img");
+        ussAssembly.src = "images/explosion.gif";
         attackButton.style.display = "none";
         retreatButton.style.display = "none";
     }
